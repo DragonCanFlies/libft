@@ -6,9 +6,11 @@
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 12:05:24 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/13 12:31:33 by latabagl         ###   ########.fr       */
+/*   Updated: 2025/05/23 15:14:54 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

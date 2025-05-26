@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:05:19 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/13 12:05:19 by latabagl         ###   ########.fr       */
+/*   Created: 2025/05/23 15:15:26 by latabagl          #+#    #+#             */
+/*   Updated: 2025/05/23 15:15:26 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	return (c >= 0 && c <= 127);
+	write(fd, &c, 1);
 }
+/*
+int main(void)
+{
+    ft_putchar_fd('a', 1);
+}*/

@@ -6,11 +6,11 @@
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 14:49:38 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/14 15:18:07 by latabagl         ###   ########.fr       */
+/*   Updated: 2025/05/23 18:36:04 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size)
 {
@@ -19,11 +19,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size)
 	size_t		i;
 
 	src_begin = src;
-	
-	while(*src)
+	while (*src)
 		src++;
 	src_size = src - src_begin;
-	if (!src_size || !dest_size)
+	if (dest_size == 0)
 		return (src_size);
 	src = src_begin;
 	i = 0;

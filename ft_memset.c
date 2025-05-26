@@ -6,11 +6,11 @@
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 12:59:35 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/13 15:17:51 by latabagl         ###   ########.fr       */
+/*   Updated: 2025/05/23 15:15:19 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

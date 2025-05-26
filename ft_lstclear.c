@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:04:55 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/23 15:16:39 by latabagl         ###   ########.fr       */
+/*   Created: 2025/05/26 12:35:17 by latabagl          #+#    #+#             */
+/*   Updated: 2025/05/26 13:09:48 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	const char	*begin;
+	t_list	*node;
+	t_list	*temp;
 
-	begin = s;
-	while (*s)
-		s++;
-	return (s - begin);
+	node = *lst;
+	while (node)
+	{
+		del(node->content);
+		temp = node;
+		node = node->next;
+		free(temp);
+	}
+	*lst = NULL;
 }
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}*/

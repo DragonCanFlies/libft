@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:04:55 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/23 15:16:39 by latabagl         ###   ########.fr       */
+/*   Created: 2025/05/16 10:55:26 by latabagl          #+#    #+#             */
+/*   Updated: 2025/05/23 15:15:08 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char	*begin;
+	const unsigned char	*first;
+	const unsigned char	*second;
 
-	begin = s;
-	while (*s)
-		s++;
-	return (s - begin);
+	first = (const unsigned char *) s1;
+	second = (const unsigned char *) s2;
+	while (n--)
+	{
+		if (*first != *second)
+			return (*first - *second);
+		first++;
+		second++;
+	}
+	return (0);
 }
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}*/

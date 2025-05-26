@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:04:55 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/23 15:16:39 by latabagl         ###   ########.fr       */
+/*   Created: 2025/05/14 17:28:16 by latabagl          #+#    #+#             */
+/*   Updated: 2025/05/23 15:15:05 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*begin;
+	const unsigned char	*scanner;
 
-	begin = s;
-	while (*s)
-		s++;
-	return (s - begin);
+	scanner = s;
+	while (n--)
+	{
+		if (*scanner == (unsigned char) c)
+			return ((void *) scanner);
+		scanner++;
+	}
+	return (NULL);
 }
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}*/

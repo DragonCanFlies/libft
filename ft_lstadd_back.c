@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:04:55 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/23 15:16:39 by latabagl         ###   ########.fr       */
+/*   Created: 2025/05/26 12:34:56 by latabagl          #+#    #+#             */
+/*   Updated: 2025/05/26 12:47:25 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	const char	*begin;
+	t_list	*node;
 
-	begin = s;
-	while (*s)
-		s++;
-	return (s - begin);
+	node = *lst;
+	if (!node)
+	{
+		*lst = new;
+		return ;
+	}
+	while (node->next)
+	{
+		node = node->next;
+	}
+	node->next = new;
 }
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}*/

@@ -6,11 +6,13 @@
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:06:23 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/14 16:30:49 by latabagl         ###   ########.fr       */
+/*   Updated: 2025/05/23 18:38:35 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	unsigned int	i;
 

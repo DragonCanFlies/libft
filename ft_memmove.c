@@ -6,11 +6,11 @@
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 16:57:26 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/14 13:54:46 by latabagl         ###   ########.fr       */
+/*   Updated: 2025/05/26 14:45:58 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

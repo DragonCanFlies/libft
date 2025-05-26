@@ -6,11 +6,11 @@
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 17:07:17 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/14 17:21:51 by latabagl         ###   ########.fr       */
+/*   Updated: 2025/05/23 15:17:00 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

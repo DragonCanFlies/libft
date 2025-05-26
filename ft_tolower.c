@@ -6,9 +6,11 @@
 /*   By: latabagl <latabagl@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:09:14 by latabagl          #+#    #+#             */
-/*   Updated: 2025/05/14 16:29:33 by latabagl         ###   ########.fr       */
+/*   Updated: 2025/05/23 15:17:17 by latabagl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
